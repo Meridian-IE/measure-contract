@@ -1,0 +1,15 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    name: Contract-Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+      - name: Run forge tests
+        run: forge test -vvv
