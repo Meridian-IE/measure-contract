@@ -9,3 +9,9 @@ Install foundry [from source](https://github.com/filecoin-saturn/contracts/blob/
 $ git submodule update --recursive
 $ foundry test
 ```
+
+## Deployment
+
+```bash
+$ forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key <your_private_key> src/Measure.sol:Measure
+```
