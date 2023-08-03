@@ -14,4 +14,6 @@ $ foundry test
 
 ```bash
 $ forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key <your_private_key> src/Measure.sol:Measure
+# The command will likely fail, but the deployment should still succeed. Use a
+# block explorer to find the address of the contract.
 ```
