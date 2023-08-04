@@ -49,12 +49,12 @@ Contracts can be deployed using the `forge cli` or using a rust deployment scrip
 ### Forge CLI
 This deployment method requires manual insertion of a private key and is not recommended for production use cases.
 
-NOTE: Deployment using forge CLI often errors out on Filecoin networks even though the transaction goes through.
+NOTE: Deployment using forge CLI often errors out on Filecoin networks even though the transaction goes through (Foundry
+is configured for EVM's block time, not FVM's). Use a block explorer to find the address of the contract.
 
 ```bash
 forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key <your_private_key> src/Measure.sol:Measure
 ```
-
 
 ### Deployment Rust Script
 
