@@ -28,7 +28,7 @@ jobs:
           submodules: recursive
       - name: Build
         run: |
-          cd cli
+          cd contract-utils
           rustc --version
           cargo build -vv
       - name: Run tests
