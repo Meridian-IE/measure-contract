@@ -49,6 +49,8 @@ Contracts can be deployed using the `forge cli` or using a rust deployment scrip
 ### Forge CLI
 This deployment method requires manual insertion of a private key and is not recommended for production use cases.
 
+NOTE: Deployment using forge CLI often errors out on Filecoin networks even though the transaction goes through.
+
 ```bash
 forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key <your_private_key> src/Measure.sol:Measure
 ```
@@ -64,7 +66,7 @@ forge bind  --crate-name contract-bindings -b ./contract-bindings
 ```
 This will create new bindings with the modified contracts.
 
-Deployment can then proceed either with a locally stored mnemonic or a connected ethereum ledger wallet. To use with a mnemonic, create `secrets/mnemonic.txt` file in the root directory.
+Deployment can then proceed either with a locally stored mnemonic or a connected ethereum ledger wallet. To use with a mnemonic, create a `secrets/mnemonic.txt` file in the root directory.
 
 To deploy, run:
 ```bash
@@ -91,5 +93,5 @@ To run tests, run:
 
 ```bash
 cd contract-utils
-cargo test cli  -- --nocapture --test-threads 1
+cargo test  -- --nocapture --test-threads 1
 ```
