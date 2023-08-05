@@ -51,3 +51,4 @@ jobs:
         with:
           target: "src/Measure.sol"
           fail-on: none
+          solc-version: 0.8.21
