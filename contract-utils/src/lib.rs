@@ -22,12 +22,13 @@ pub mod measure {
         client: Arc<S>,
         retries: usize,
         provider: Provider<Http>,
+        address: H160,
     ) -> Result<H160, Box<dyn std::error::Error>> {
         let gas_price = provider.get_gas_price().await?;
         println!("current gas price: {:#?}", gas_price);
         println!("using {} retries", retries);
 
-        let mut contract = Measure::deploy(client.clone(), ())?;
+        let mut contract = Measure::deploy(client.clone(), address)?;
         let tx = contract.deployer.tx.clone();
         set_tx_gas(
             &mut contract.deployer.tx,

@@ -21,7 +21,7 @@ async fn main() {
                 .await
                 .unwrap();
             let client = Arc::new(ledger_client);
-            deploy_factory_contract(client.clone(), RETRIES, provider)
+            deploy_factory_contract(client.clone(), RETRIES, provider, client.address())
                 .await
                 .unwrap();
         }
@@ -32,7 +32,7 @@ async fn main() {
                 .await
                 .unwrap();
             let client = Arc::new(local_client);
-            deploy_factory_contract(client.clone(), RETRIES, provider)
+            deploy_factory_contract(client.clone(), RETRIES, provider, client.address())
                 .await
                 .unwrap();
         }

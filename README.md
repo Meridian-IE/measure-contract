@@ -52,9 +52,24 @@ This deployment method requires manual insertion of a private key and is not rec
 NOTE: Deployment using forge CLI often errors out on Filecoin networks even though the transaction goes through (Foundry
 is configured for EVM's block time, not FVM's). Use a block explorer to find the address of the contract.
 
+Make sure the following env vars are defined as follows:
 ```bash
-forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key <your_private_key> src/Measure.sol:Measure
+export RPC_URL="..."
+export ADMIN_ADDRESS="..."
+export MNEMONIC_PATH="{path to mnemonic secret file}"
 ```
+
+To deploy using a private key, run:
+
+```bash
+forge create --rpc-url $RPC_URL --private-key <your_private_key> src/Measure.sol:Measure --constructor-args $ADMIN_ADDRESS
+```
+
+To deploy using a local mnemonic secret, run:
+```bash
+forge create --rpc-url $RPC_URL --mnemonic $MNEMONIC_PATH src/Measure.sol:Measure --constructor-args $ADMIN_ADDRESS
+```
+
 
 ### Deployment Rust Script
 

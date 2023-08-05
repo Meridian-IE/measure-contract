@@ -30,7 +30,7 @@ async fn deploy() -> Result<(), Box<dyn std::error::Error>> {
         .await
         .unwrap();
     let client = Arc::new(local_client);
-    let address = deploy_factory_contract(client.clone(), 15, provider)
+    let address = deploy_factory_contract(client.clone(), 15, provider, client.address())
         .await
         .unwrap();
 
