@@ -36,8 +36,8 @@ jobs:
       - name: Compile
         run: |
           forge build --build-info
-          solc-select install 0.8.17
-          solc-select use 0.8.17
+          solc-select install 0.8.21
+          solc-select use 0.8.21
 
       - name: Run forge tests
         run: forge test -vvv
