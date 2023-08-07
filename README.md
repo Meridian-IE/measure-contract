@@ -28,7 +28,7 @@ foundry test
 
 ##### Local Development
 
-To iterate quickly, the  `anvil` network can be used to locally develop. Note that Anvil strictly uses Etheruem addressing and does not include Filecoin Pre-compiles.
+To iterate quickly, the  `anvil` network can be used to develop locally. Note that Anvil strictly uses Etheruem addressing and does not include Filecoin pre-compiles.
 
 First run `anvil` by running:
 ```bash
