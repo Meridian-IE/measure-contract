@@ -20,8 +20,8 @@ cargo install --path ./anvil --profile local --locked --force
 ##### Clone Repo and Install
 
 ```bash
-git clone https://github.com/filecoin-station/meridian-measure-contract.git
-cd meridian-measure-contract
+git clone https://github.com/meridian-ie/measure-contract.git
+cd measure-contract
 git submodule update --recursive
 foundry test
 ```
