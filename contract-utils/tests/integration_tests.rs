@@ -1,6 +1,6 @@
 use assert_fs::fixture::FileWriteStr;
 use assert_fs::NamedTempFile;
-use contract_utils::measure::deploy_factory_contract;
+use contract_utils::measure::deploy_contract;
 use once_cell::sync::Lazy;
 use std::fs::read_to_string;
 use std::sync::Mutex;
@@ -30,7 +30,7 @@ async fn deploy() -> Result<(), Box<dyn std::error::Error>> {
         .await
         .unwrap();
     let client = Arc::new(local_client);
-    let address = deploy_factory_contract(client.clone(), 15, provider, client.address())
+    let address = deploy_contract(client.clone(), 15, provider, client.address())
         .await
         .unwrap();
 

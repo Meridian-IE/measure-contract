@@ -1,4 +1,4 @@
-use contract_utils::measure::{deploy_factory_contract, DeployMethod};
+use contract_utils::measure::{deploy_contract, DeployMethod};
 use ethers::providers::Middleware;
 use fevm_utils::{get_ledger_signing_provider, get_provider, get_wallet_signing_provider};
 use std::fs::read_to_string;
@@ -21,7 +21,7 @@ async fn main() {
                 .await
                 .unwrap();
             let client = Arc::new(ledger_client);
-            deploy_factory_contract(client.clone(), RETRIES, provider, client.address())
+            deploy_contract(client.clone(), RETRIES, provider, client.address())
                 .await
                 .unwrap();
         }
@@ -32,7 +32,7 @@ async fn main() {
                 .await
                 .unwrap();
             let client = Arc::new(local_client);
-            deploy_factory_contract(client.clone(), RETRIES, provider, client.address())
+            deploy_contract(client.clone(), RETRIES, provider, client.address())
                 .await
                 .unwrap();
         }

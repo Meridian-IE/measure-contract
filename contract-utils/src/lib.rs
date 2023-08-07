@@ -18,7 +18,7 @@ pub mod measure {
         Test(S),
     }
 
-    pub async fn deploy_factory_contract<S: Middleware + 'static>(
+    pub async fn deploy_contract<S: Middleware + 'static>(
         client: Arc<S>,
         retries: usize,
         provider: Provider<Http>,
