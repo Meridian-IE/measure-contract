@@ -30,7 +30,7 @@ foundry test
 
 To iterate quickly, the  `anvil` network can be used to develop locally. Note that Anvil strictly uses Etheruem addressing and does not include Filecoin pre-compiles.
 
-First run `anvil` by running:
+First run `anvil`:
 ```bash
 anvil
 ```
