@@ -99,9 +99,9 @@ Integration tests run on the filecoin calibration net and require a wallet with 
 Before running integration tests, these env vars are required:
 
 ```bash
-    export TEST_RPC_URL=https://api.calibration.node.glif.io/rpc/v1
-    export TEST_MNEMONIC={insert wallet mnemonic here}
-    export TEST_CONTRACT_ADDRESS={this can be an empty string}
+export TEST_RPC_URL=https://api.calibration.node.glif.io/rpc/v1
+export TEST_MNEMONIC={insert wallet mnemonic here}
+export TEST_CONTRACT_ADDRESS={this can be an empty string}
 ```
 
 To run tests, run:
