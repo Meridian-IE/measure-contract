@@ -40,8 +40,7 @@ The output will provide a list of private keys and addresses that can be used. A
 To deploy the contract on Anvil, run:
 
 ```bash
-forge create --rpc-url http://127.0.0.1:8545 --mnemonic "test test test test test test test test test test test junk" src/Measure.sol:Measure --constructor-args
-0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+forge create --rpc-url http://127.0.0.1:8545 --mnemonic "test test test test test test test test test test test junk" src/Measure.sol:Measure --constructor-args 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 ```
 
 ## Deployment
