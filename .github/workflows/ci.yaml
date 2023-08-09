@@ -16,7 +16,7 @@ jobs:
     env:
       TEST_RPC_URL: ${{secrets.TEST_RPC_URL}}
       TEST_MNEMONIC: ${{secrets.TEST_MNEMONIC}}
-      TEST_FACTORY_ADDRESS: ${{secrets.TEST_FACTORY_ADDRESS}}
+      TEST_FACTORY_ADDRESS: ${{secrets.TEST_CONTRACT_ADDRESS}}
     steps:
       - uses: actions-rs/toolchain@v1
         with:
