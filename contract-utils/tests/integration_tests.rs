@@ -14,7 +14,7 @@ static MNEMONIC: Lazy<String> =
     Lazy::new(|| env::var("TEST_MNEMONIC").expect("TEST_MNEMONIC must be set"));
 
 static CONTRACT_ADDRESS: Lazy<Mutex<String>> = Lazy::new(|| {
-    Mutex::new(env::var("TEST_CONTRACT_ADDRESS").expect("TEST_FACTORY_ADDRESS must be set"))
+    Mutex::new(env::var("TEST_CONTRACT_ADDRESS").expect("TEST_CONTRACT_ADDRESS must be set"))
 });
 static SECRETS_FILE: Lazy<NamedTempFile> = Lazy::new(|| {
     let file = assert_fs::NamedTempFile::new("secrets.txt").unwrap();
